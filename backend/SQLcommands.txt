@@ -1,0 +1,9 @@
+/// ---  Delete the information into table transaction  ---- ///
+/// ---	       And Set Auto_increment = 1               ---- ///
+
+DELETE FROM transaction;
+SET  @num := 0;
+UPDATE transaction SET transaction_id = @num := (@num+1);
+ALTER TABLE transaction AUTO_INCREMENT =1
+
+/// -- 
